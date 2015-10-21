@@ -35,7 +35,7 @@ quiet_git_do () {
 
 	expect_existing "${work_dir}" || return 1
 
-	git_do "${work_dir}" "${cmd}" "$@" >'/dev/null' 2>&1 || return 1
+	git_do "${work_dir}" "${cmd}" "$@" || return 1
 }
 
 
